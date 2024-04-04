@@ -78,15 +78,13 @@ Similarly to how Canny Edge detection would work great if your object is the onl
 
 Open and run `houghLines.py`. Unlike the circles algorithm, the lines algorithm is much less time intensive when it comes to false negatives so there is no image shrinking done for this one.
 
-You can find more information on the commands used [here](https://docs.opencv.org/2.4/doc/tutorials/imgproc/imgtrans/hough_lines/
-hough_lines.html).
+You can find more information on the commands used [here](https://docs.opencv.org/2.4/doc/tutorials/imgproc/imgtrans/hough_lines/hough_lines.html).
 
 ### 5.2 Circles
 
 Open and run `houghCircles.py`. Due to how many false circles are detected by the algorithm, the frame is shrunk with respect to the original captured image. This is accounted for in the accumulator ratio slider bar. If you wish to play more with this, you can change the ratio of the shrunk image with respect to the ratio.
 
-You can find more information on the commands used [here](https://docs.opencv.org/2.4/doc/tutorials/imgproc/imgtrans/hough_circle/
-hough_circle.html).
+You can find more information on the commands used [here](https://docs.opencv.org/2.4/doc/tutorials/imgproc/imgtrans/hough_circle/hough_circle.html).
 
 ### 5.3 Sudoku Grid
 
