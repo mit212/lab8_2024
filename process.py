@@ -13,13 +13,13 @@ cv2.imshow("Gray_Image", gray)
 cv2.waitKey(3) 
 
 # Convert the image to binary with edges detected
-lower_threshold = 0#TO DO
-upper_threshold = 1500#TO DO
+lower_threshold = 0 # TODO: Modify this.
+upper_threshold = 1500 # TODO: Modify this.
 edges = cv2.Canny(gray,lower_threshold,upper_threshold,apertureSize = 3)   # Canny edge detector to make it easier for hough transform to "agree" on lines
 #cv2.imshow("Canny_Image", edges)
 #cv2.waitKey(3) 
 
-min_intersections = 10000  # TO DO: Play with this parameter to change sensitivity.
+min_intersections = 10000  # TODO: Play with this parameter to change sensitivity.
 lines = cv2.HoughLines(edges,1,np.pi/180,min_intersections)     # Run Hough Transform
 for line in lines:                         # Plot lines over original feed
     for rho,theta in line:
