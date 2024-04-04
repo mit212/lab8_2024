@@ -55,6 +55,8 @@ In computer vision, one of the first things introduced is gamma adjustment or co
 
 When you run this file, three windows will appear. One will show your unprocessed raw camera footage, another will show a processed (gamma adjusted image), and the last will have a slider. Play around with the slider and see what you observe (make it completely black or white).
 
+To stop running the script, go to the terminal in VSCode and enter `Ctrl+C`.
+
 ## 3 Otsu’s method of Thresholding
 
 It is important to note that one of the prime goals of computer vision is to separate an image into *what you care about* and *what you don’t care about*. Otsu’s method of thresholding is a prime example of a simple method that algorithmically separates pixels into two separate classes. To use it, open and run `otsu.py`.
@@ -87,7 +89,7 @@ You can find more information on the commands used [here](https://docs.opencv.or
 
 ### 5.3 Sudoku Grid
 
-Before running this on camera footage, you will be processing `sudoku.png`. Namely, you’ll be editing the file `process.py`. The goal for this script is to isolate the grid lines and only the grid lines of the sudoku grid. 
+Before running this on camera footage, you will be processing `sudoku.png`. Namely, edit the `TODO`s `process.py`. The goal for this script is to isolate the grid lines and only the grid lines of the sudoku grid. 
 
 | :white_check_mark: CHECKOFF 1 :white_check_mark:   |
 |:---------------------------------------------------|
@@ -102,7 +104,7 @@ After capturing the objects of your choosing, you’ll want to note down the HSV
 
 ## 7 Morphological Operations
 
-After using the color thresholding, you may have noticed that there are some features that remain in the image aside from your object that you want to detect. With that in mind, morphological operations are an excellent way of getting rid of extra features you don’t want and enlarging objects you do want. To experiment and find which operations work best, open and run `morphOps.py`.
+After using the color thresholding, you may have noticed that there are some features that remain in the image aside from your object that you want to detect. With that in mind, morphological operations are an excellent way of getting rid of extra features you don’t want and enlarging objects you do want. To experiment and find which operations work best, open and run `morphOps.py`. Use the HSV values from the [previous section](#6-hsv-vs-rgb)
 
 Something else interesting about morphological operations is the kernel operator that is used. If you open the script, you’ll find a section of code that allows you to write in your own kernel (a vertical line is given as an example in the comments). Rerun the script with a kernel of your own design.
 
