@@ -6,30 +6,28 @@ Spring 2024[^1]
 <details>
   <summary>Table of Contents</summary>
 
-- [Lab 8: Computer Vision](#lab-8-computer-vision)
-  - [0 (Prelab) Software Set Up](#0-prelab-software-set-up)
-    - [0.1 Python](#01-python)
-    - [0.2 OpenCV](#02-opencv)
-    - [0.3 Matplotlib](#03-matplotlib)
-  - [1 Hardware Set Up](#1-hardware-set-up)
-  - [2 Gamma Adjustment](#2-gamma-adjustment)
-  - [3 Otsu’s method of Thresholding](#3-otsus-method-of-thresholding)
-  - [4 Canny Edge Detection](#4-canny-edge-detection)
-  - [5 Hough Transforms](#5-hough-transforms)
-    - [5.1 Lines](#51-lines)
-    - [5.2 Circles](#52-circles)
-    - [5.3 Sudoku Grid](#53-sudoku-grid)
-  - [6 HSV vs RGB](#6-hsv-vs-rgb)
-  - [7 Morphological Operations](#7-morphological-operations)
-  - [8 Optical Flow](#8-optical-flow)
-  - [9 Feedback Form](#9-feedback-form)
+- [0 (Prelab) Software Set Up](#0-prelab-software-set-up)
+  - [0.1 Python](#01-python)
+  - [0.2 OpenCV](#02-opencv)
+  - [0.3 Matplotlib](#03-matplotlib)
+- [1 Hardware Set Up](#1-hardware-set-up)
+- [2 Gamma Adjustment](#2-gamma-adjustment)
+- [3 Otsu’s method of Thresholding](#3-otsus-method-of-thresholding)
+- [4 Canny Edge Detection](#4-canny-edge-detection)
+- [5 Hough Transforms](#5-hough-transforms)
+  - [5.1 Lines](#51-lines)
+  - [5.2 Circles](#52-circles)
+  - [5.3 Sudoku Grid](#53-sudoku-grid)
+- [6 HSV vs RGB](#6-hsv-vs-rgb)
+- [7 Morphological Operations](#7-morphological-operations)
+- [8 Optical Flow](#8-optical-flow)
+- [9 Feedback Form](#9-feedback-form)
 
 </details>
 
-In this lab, you will be trying out different functions from OpenCV to visualize the computer vision techniques introduced in lecture.
+In this lab, you will be trying out different functions from OpenCV to visualize the computer vision techniques introduced in lecture. The entire lab is designed to take less an hour. The rest of lab time is allotted to working on the final project.
 
 ## 0 (Prelab) Software Set Up
-Estimated time of completion: 5 min
 
 ### 0.1 Python
 
@@ -56,6 +54,8 @@ Clone this repository.
 In computer vision, one of the first things introduced is gamma adjustment or correction. To experiment with this concept, open and run `gammaAdj.py`.
 
 When you run this file, three windows will appear. One will show your unprocessed raw camera footage, another will show a processed (gamma adjusted image), and the last will have a slider. Play around with the slider and see what you observe (make it completely black or white).
+
+To stop running the script, go to the terminal in VSCode and enter `Ctrl+C`.
 
 ## 3 Otsu’s method of Thresholding
 
@@ -89,7 +89,7 @@ You can find more information on the commands used [here](https://docs.opencv.or
 
 ### 5.3 Sudoku Grid
 
-Before running this on camera footage, you will be processing `sudoku.png`. Namely, you’ll be editing the file `process.py`. The goal for this script is to isolate the grid lines and only the grid lines of the sudoku grid. 
+Before running this on camera footage, you will be processing `sudoku.png`. Namely, edit the `TODO`s `process.py`. The goal for this script is to isolate the grid lines and only the grid lines of the sudoku grid. 
 
 | :white_check_mark: CHECKOFF 1 :white_check_mark:   |
 |:---------------------------------------------------|
@@ -103,7 +103,7 @@ After capturing the objects of your choosing, you’ll want to note down the HSV
 
 ## 7 Morphological Operations
 
-After using the color thresholding, you may have noticed that there are some features that remain in the image aside from your object that you want to detect. With that in mind, morphological operations are an excellent way of getting rid of extra features you don’t want and enlarging objects you do want. To experiment and find which operations work best, open and run `morphOps.py`.
+After using the color thresholding, you may have noticed that there are some features that remain in the image aside from your object that you want to detect. With that in mind, morphological operations are an excellent way of getting rid of extra features you don’t want and enlarging objects you do want. To experiment and find which operations work best, open and run `morphOps.py`. Use the HSV values from the [previous section](#6-hsv-vs-rgb)
 
 Something else interesting about morphological operations is the kernel operator that is used. If you open the script, you’ll find a section of code that allows you to write in your own kernel (a vertical line is given as an example in the comments). Rerun the script with a kernel of your own design.
 
