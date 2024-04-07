@@ -6,22 +6,23 @@ Spring 2024[^1]
 <details>
   <summary>Table of Contents</summary>
 
-- [0 (Prelab) Software Set Up](#0-prelab-software-set-up)
-  - [0.1 Python](#01-python)
-  - [0.2 OpenCV](#02-opencv)
-  - [0.3 Matplotlib](#03-matplotlib)
-- [1 Hardware Set Up](#1-hardware-set-up)
-- [2 Gamma Adjustment](#2-gamma-adjustment)
-- [3 Otsu’s method of Thresholding](#3-otsus-method-of-thresholding)
-- [4 Canny Edge Detection](#4-canny-edge-detection)
-- [5 Hough Transforms](#5-hough-transforms)
-  - [5.1 Lines](#51-lines)
-  - [5.2 Circles](#52-circles)
-  - [5.3 Sudoku Grid](#53-sudoku-grid)
-- [6 HSV vs RGB](#6-hsv-vs-rgb)
-- [7 Morphological Operations](#7-morphological-operations)
-- [8 Optical Flow](#8-optical-flow)
-- [9 Feedback Form](#9-feedback-form)
+- [Lab 8: Computer Vision](#lab-8-computer-vision)
+  - [0 (Prelab) Software Set Up](#0-prelab-software-set-up)
+    - [0.1 Python](#01-python)
+    - [0.2 OpenCV](#02-opencv)
+    - [0.3 Matplotlib](#03-matplotlib)
+  - [1 Hardware Set Up](#1-hardware-set-up)
+  - [2 Gamma Adjustment](#2-gamma-adjustment)
+  - [3 Otsu’s method of Thresholding](#3-otsus-method-of-thresholding)
+  - [4 Canny Edge Detection](#4-canny-edge-detection)
+  - [5 Hough Transforms](#5-hough-transforms)
+    - [5.1 Lines](#51-lines)
+    - [5.2 Circles](#52-circles)
+    - [5.3 Sudoku Grid](#53-sudoku-grid)
+  - [6 HSV vs RGB](#6-hsv-vs-rgb)
+  - [7 Morphological Operations](#7-morphological-operations)
+  - [8 Optical Flow](#8-optical-flow)
+  - [9 Feedback Form](#9-feedback-form)
 
 </details>
 
@@ -32,15 +33,15 @@ Estimated time of completion: 5 min
 
 ### 0.1 Python
 
-You should already have Python (version 3.9+) installed from [Lab 4](https://github.com/mit212/lab4_2024?tab=readme-ov-file#01-python). You can check which version of Python you have by running `python3 -V` or `python -V` in your terminal.
+You should already have Python (version 3.9+) installed from [Lab 4](https://github.com/mit212/lab4_2024?tab=readme-ov-file#01-python). You can check which version of Python you have by entering `python3 -V` or `python -V` in your terminal.
 
 ### 0.2 OpenCV
 
-OpenCV is an open source computer vision library. To install OpenCV, run `pip install opencv-python` in your terminal. 
+OpenCV is an open source computer vision library. To install OpenCV, enter `pip install opencv-python` in your terminal. 
 
 ### 0.3 Matplotlib
 
-Matplotlib is a comprehensive library for creating static, animated, and interactive visualizations in Python. To install Matplotlib, run `pip install matplotlib` in your terminal.
+Matplotlib is a comprehensive library for creating static, animated, and interactive visualizations in Python. To install Matplotlib, enter `pip install matplotlib` in your terminal.
 
 ## 1 Hardware Set Up 
 
@@ -78,15 +79,13 @@ Similarly to how Canny Edge detection would work great if your object is the onl
 
 Open and run `houghLines.py`. Unlike the circles algorithm, the lines algorithm is much less time intensive when it comes to false negatives so there is no image shrinking done for this one.
 
-You can find more information on the commands used [here](https://docs.opencv.org/2.4/doc/tutorials/imgproc/imgtrans/hough_lines/
-hough_lines.html).
+You can find more information on the commands used [here](https://docs.opencv.org/2.4/doc/tutorials/imgproc/imgtrans/hough_lines/hough_lines.html).
 
 ### 5.2 Circles
 
 Open and run `houghCircles.py`. Due to how many false circles are detected by the algorithm, the frame is shrunk with respect to the original captured image. This is accounted for in the accumulator ratio slider bar. If you wish to play more with this, you can change the ratio of the shrunk image with respect to the ratio.
 
-You can find more information on the commands used [here](https://docs.opencv.org/2.4/doc/tutorials/imgproc/imgtrans/hough_circle/
-hough_circle.html).
+You can find more information on the commands used [here](https://docs.opencv.org/2.4/doc/tutorials/imgproc/imgtrans/hough_circle/hough_circle.html).
 
 ### 5.3 Sudoku Grid
 
@@ -98,8 +97,7 @@ Before running this on camera footage, you will be processing `sudoku.png`. Name
 
 ## 6 HSV vs RGB
 
-If you were paying very close attention, you may have noticed that ALL the algorithms before this section are conducted after converting your raw image into grayscale. With that in mind, we will now experiment with colors. For this section, in addition to the object you’ve been using, we ask that you find a few different colored objects to experiment with the robustness of the two methods
-for separation presented here. To begin the script, open and run `colorThresh.py `.
+If you were paying very close attention, you may have noticed that ALL the algorithms before this section are conducted after converting your raw image into grayscale. With that in mind, we will now experiment with colors. For this section, in addition to the object you’ve been using, we ask that you find a few different colored objects to experiment with the robustness of the two methods for separation presented here. To begin the script, open and run `colorThresh.py `.
 
 After capturing the objects of your choosing, you’ll want to note down the HSV values for the next part of the lab.
 
