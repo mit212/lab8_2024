@@ -1,9 +1,6 @@
-#!/usr/bin/python
-
 # 2.12 Lab 7 object detection: a node for observing erosion/dilation
 # Jacob Guggenheim 2019
 # Jerry Ng 2019, 2020
-
 
 import numpy as np
 import cv2  # OpenCV module
@@ -12,7 +9,6 @@ from tkinter import *
 
 import math
 
-# Bridge to convert ROS Image type to OpenCV Image type
 tk = Tk()
 l_h = Scale(tk, from_ = 0, to = 255, label = 'Hue, lower', orient = HORIZONTAL)
 l_h.pack()
