@@ -132,4 +132,4 @@ Before you leave, please fill out https://tinyurl.com/212-feedback.
   Version 3 - 2019: Jerry Ng, Jacob Guggenheim  
   Version 4 - 2020: Jerry Ng, Rachel Hoffman, Steven Yeung, and Kamal Youcef-Toumi  
   Version 4 - 2020: Phillip Daniel
-  Version 5 - 2024: Jinger Chong, Josh Sohn
+  Version 5 - 2024: Jinger Chong
